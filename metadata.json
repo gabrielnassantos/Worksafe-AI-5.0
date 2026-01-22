@@ -1,0 +1,8 @@
+{
+  "name": "Work Safe AI 5.0",
+  "description": "A comprehensive enterprise-grade workplace safety management system featuring AI-driven hazard detection, incident reporting, and real-time safety monitoring.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

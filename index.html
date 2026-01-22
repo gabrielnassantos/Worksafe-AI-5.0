@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkSafe AI - Safety Management System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'view-fade-in': 'view-fade-in 0.4s ease-out forwards',
+            'slide-question': 'slide-question 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+            'feedback-pop': 'feedback-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+            'pulse-soft': 'pulse-soft 2s infinite',
+          },
+          keyframes: {
+            'view-fade-in': {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            'slide-question': {
+              '0%': { opacity: '0', transform: 'translateX(50px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            'feedback-pop': {
+              '0%': { opacity: '0', transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+            'pulse-soft': {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.7' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    .view-transition-container {
+      animation: view-fade-in 0.4s ease-out forwards;
+    }
+
+    .question-card-animate {
+      animation: slide-question 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+
+    .feedback-animate {
+      animation: feedback-pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-x-hidden">
+  <div id="root"></div>
+  <!-- No CodeSandbox/Vite, o ponto de entrada costuma ser src/index.tsx ou src/main.tsx -->
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
